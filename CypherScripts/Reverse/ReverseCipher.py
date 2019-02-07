@@ -1,5 +1,5 @@
 # Reverse Cipher
-# This program takes a string and reverses it, demonstrating an elementary encryption al.
+# This program takes a string and reverses it, demonstrating an elementary encryption algorithm.
 
 
 class ReverseCipher:
