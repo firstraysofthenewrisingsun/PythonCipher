@@ -61,19 +61,19 @@ class CaesarCipher:
         for symbol in range(len(message)):
             letter = message[symbol]
             if letter in self.LETTERS:
-                translated += chr((ord(letter) + key + int(rand)) + 65)
+                translated += chr((ord(letter) + key) % 26)
             else:
                 pass
         return translated
 
     #  Decrypts string
-    def run_decrypt(self, key, message, rand):
+    def run_decrypt(self, key, message):
         translated = ''
         letters = ''
         for symbol in range(len(message)):
             letter = message[symbol]
             if letters in self.LETTERS:
-                translated += chr((ord(letter) - key - int(rand)) - 65)
+                translated += chr((ord(letter) - key) % 26)
             else:
                 pass
         return translated
